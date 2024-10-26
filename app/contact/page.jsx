@@ -1,84 +1,119 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
-const services = [
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
+const info = [
   {
-    num: "01",
-    title: "Demo Technologies",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    href: "",
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    description: "(+91) 8109430065",
   },
   {
-    num: "02",
-    title: "Demo Technologies",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    href: "",
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "amankahar594@gmail.com",
   },
   {
-    num: "03",
-    title: "Demo Technologies",
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    href: "",
-  },
-  {
-    num: "04",
-    title: "Demo Technologies",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    href: "",
+      "Ward no.13 Tola Sausar dist. Pandhurna Madhya Pradesh - 480106",
   },
 ];
 
 import { motion } from "framer-motion";
-import { Contact } from "lucide-react";
 
-const Services = () => {
+const Contact = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
+      className="py-6"
+    >
       <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
-        >
-          {services.map((services, index) => {
-            return (
-              <div
-                key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group"
-              >
-                <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
-                    {services.num}
-                  </div>
-                  <Link
-                    href={services.href}
-                    className="w-[50px] h-[50px] rounded-full bg-white/50 group-hover:bg-amber-500 transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                  >
-                    <BsArrowDownRight className="text-primary text-2xl" />
-                  </Link>
-                </div>
-                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-yellow-500 transition-all duration-500">
-                  {services.title}
-                </h2>
-                <p className="text-white/60 ">
-                  {services.description}
-                  <div className="border-b border-white/20 w-full"></div>
-                </p>
+        <div className="flex flex-col xl:flex-row gap-[30px]">
+          {/*from*/}
+          <div className="xl:h-[54%] order-2 xl:order-none">
+            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+              <h3 className="text-4xl text-amber-500">Let's Work Together</h3>
+              <p className="text-white/60">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                delectus ipsam fuga magni. Doloribus, velit at.
+              </p>
+
+              {/*inputs*/}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Input type="firstname" placeholder="Firstname" />
+                <Input type="lastname" placeholder="Lastname" />
+                <Input type="email" placeholder="Email address" />
+                <Input type="phone" placeholder="Phone number" />
               </div>
-            );
-          })}
-        </motion.div>
+
+              {/*select*/}
+              <Select>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a Service" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Select a Service</SelectLabel>
+                    <SelectItem value="est">Web Development</SelectItem>
+                    <SelectItem value="cst">Java Development</SelectItem>
+                    <SelectItem value="mst">App Development</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+
+              {/*Textarea*/}
+              <Textarea
+                className="h-[200px]"
+                placeholder="Type your message here..."
+              />
+
+              {/*btn*/}
+              <Button size="md" className="max-w-40">
+                Send Message
+              </Button>
+            </form>
+          </div>
+          {/*info*/}
+          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+            <ul className="flex flex-col gap-10">
+              {info.map((item, index) => {
+                return (
+                  <li key={index} className="flex items-center gap-6">
+                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-amber-500 rounded-md flex items-center justify-center">
+                      <div className="text-[28px]">{item.icon}</div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white/60">{item.title}</p>
+                      <h3 className="text-xl">{item.description}</h3>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
