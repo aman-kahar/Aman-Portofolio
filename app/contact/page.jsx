@@ -4,16 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const info = [
@@ -54,8 +44,7 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-amber-500">Let's Work Together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                delectus ipsam fuga magni. Doloribus, velit at.
+              "Let's collaborate and innovate together, leveraging our skills to drive success in the ever-evolving world of technology!"
               </p>
 
               {/*inputs*/}
@@ -64,22 +53,8 @@ const Contact = () => {
                 <Input type="lastname" placeholder="Lastname" />
                 <Input type="email" placeholder="Email address" />
                 <Input type="phone" placeholder="Phone number" />
+                <Input type="subject" placeholder="Subject" />
               </div>
-
-              {/*select*/}
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a Service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a Service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">Java Development</SelectItem>
-                    <SelectItem value="mst">App Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
 
               {/*Textarea*/}
               <Textarea
