@@ -54,7 +54,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Experience - Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla repellat optio, atque tempore eaque incidunt culpa deleniti",
+    "Experience - Fresher Searching for Job...",
   items: [
     {
       company: "Demo1",
@@ -94,7 +94,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Education - Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla repellat optio, atque tempore eaque incidunt culpa deleniti",
+    "Education - B.Tech - (Computer Science and Engineering)",
   items: [
     {
       institution: "Shri Ram Institution of Technology Jabalpur",
