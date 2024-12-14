@@ -58,7 +58,8 @@ const projects = [
     stack: [{ name: "JAVA" }, { name: "SWINGS" }, { name: "MYSQL" }],
     image: "/assets/work/FeesManagementSystem.png",
     live: "",
-    github: "https://github.com/aman-kahar/Fees_Management_System-College-Major-Project",
+    github:
+      "https://github.com/aman-kahar/Fees_Management_System-College-Major-Project",
   },
 ];
 
@@ -86,13 +87,13 @@ const Projects = () => {
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/** outline num */}
-              <div className="text-5xl inline-flex leading-none font-extrabold text-transparent text-outline">
-                {project.num + "    🌐"}
+              <div className="text-5xl leading-none font-extrabold text-transparent text-outline">
+                {project.num}
+              </div>
               {/** project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-yellow-500 transition-all duration-500 capitalize">
                 {project.title}
               </h2>
-              </div>
               {/** project description and category */}
               <p className="text-white/60">Category : {project.category}</p>
               <p className="text-white/60">{project.description}</p>
