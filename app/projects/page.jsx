@@ -88,11 +88,11 @@ const Projects = () => {
               {/** outline num */}
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
-              </div>
               {/** project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-yellow-500 transition-all duration-500 capitalize">
                 {project.title}
               </h2>
+              </div>
               {/** project description and category */}
               <p className="text-white/60">Category : {project.category}</p>
               <p className="text-white/60">{project.description}</p>
