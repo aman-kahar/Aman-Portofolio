@@ -94,7 +94,7 @@ const Projects = () => {
                 {project.title}
               </h2>
               {/** project description and category */}
-              <p className="text-white/60">{project.category}</p>
+              <p className="text-white/60">Category : {project.category}</p>
               <p className="text-white/60">{project.description}</p>
               {/** stack */}
               <ul className="flex gap-4">
