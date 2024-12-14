@@ -87,7 +87,7 @@ const Projects = () => {
             <div className="flex flex-col gap-[30px] h-[50%]">
               {/** outline num */}
               <div className="text-5xl inline-flex leading-none font-extrabold text-transparent text-outline">
-                {project.num + "    "}
+                {project.num + "    🌐"}
               {/** project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-yellow-500 transition-all duration-500 capitalize">
                 {project.title}
