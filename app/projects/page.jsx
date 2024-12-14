@@ -91,9 +91,10 @@ const Projects = () => {
               </div>
               {/** project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-yellow-500 transition-all duration-500 capitalize">
-                {project.category} project
+                {project.title}
               </h2>
-              {/** project description */}
+              {/** project description and category */}
+              <p className="text-white/60">{project.category}</p>
               <p className="text-white/60">{project.description}</p>
               {/** stack */}
               <ul className="flex gap-4">
