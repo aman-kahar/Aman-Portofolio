@@ -32,11 +32,12 @@ const Stats = () => {
                 key={index}
               >
                 <CountUp
-                  end={item.num + "+ "}
+                  end={item.num}
                   duration={5}
                   delay={2}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
+                <pre className="text-4xl xl:text-6xl font-extrabold">+ </pre>
                 <p
                   className={`${
                     item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
